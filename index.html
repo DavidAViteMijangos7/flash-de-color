@@ -13,8 +13,8 @@
   :root {
     --glow: #ffffff;          /* color de luz elegido */
     --ink: #ffffff;           /* texto sobre pastillas */
-    --pill: rgba(0, 0, 0, .62);
-    --pill-strong: rgba(0, 0, 0, .82);
+    --pill: rgba(0, 0, 0, .45);
+    --pill-strong: rgba(0, 0, 0, .55);
     --ring: #ffffff;
     --dark: #060607;
     --font: ui-rounded, "SF Pro Rounded", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
@@ -63,8 +63,8 @@
   .stage { display: grid; place-items: center; min-height: 0; }
   .frame {
     position: relative;
-    height: min(100%, 62vw * 4 / 3);
-    max-height: 520px;
+    height: min(100%, 44vw * 4 / 3);
+    max-height: 340px;
     aspect-ratio: 3 / 4;
     border-radius: 28px;
     overflow: hidden;
@@ -208,17 +208,17 @@
   "use strict";
   var COLORS = [
     ["Blanco",   "#ffffff"],
-    ["Rojo",     "#ff1a1a"],
-    ["Naranja",  "#ff7a00"],
-    ["Amarillo", "#ffe600"],
-    ["Verde",    "#00e64d"],
-    ["Cian",     "#00e5ff"],
-    ["Azul",     "#1a4dff"],
-    ["Morado",   "#8a2be2"],
-    ["Magenta",  "#ff00c8"],
-    ["Rosa",     "#ff7eb6"]
+    ["Rojo",     "#ff3030"],
+    ["Naranja",  "#ff8800"],
+    ["Amarillo", "#ffee00"],
+    ["Verde",    "#00ff55"],
+    ["Cian",     "#00f0ff"],
+    ["Azul",     "#2f6bff"],
+    ["Morado",   "#a04dff"],
+    ["Magenta",  "#ff2fd6"],
+    ["Rosa",     "#ff8fc0"]
   ];
-  var FLASH_MS = 550;       // tiempo para que la cámara ajuste la exposición a la luz
+  var FLASH_MS = 900;       // tiempo para que la cámara ajuste la exposición a la luz
   var $ = function (id) { return document.getElementById(id); };
   var video = $("video"), canvas = $("canvas"), msg = $("msg");
   var stream = null, facing = "user", busy = false, wake = null;
